@@ -14,7 +14,7 @@ func sample(c *gin.Context) {
 
 func setupRouter() *gin.Engine {
 	router := gin.Default()
-	router.GET("/", sample)
+	router.GET("/sample", sample)
 	router.GET("/login", v1.LoginHandler)
 	router.POST("/create_user", v1.CreateUser)
 
