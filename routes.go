@@ -1,6 +1,8 @@
 package main
 
 import (
+	"net/http"
+
 	v1 "github.com/communi-tree/twigs-api/app/controllers"
 	"github.com/communi-tree/twigs-api/app/utils/middleware"
 	"github.com/gin-gonic/gin"
