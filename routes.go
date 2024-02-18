@@ -6,8 +6,13 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+func sample(c *gin.Context) {
+    c.String(http.StatusOK, "Welcome to the twigs api!")
+}
+
 func setupRouter() *gin.Engine {
 	router := gin.Default()
+	router.GET("/", sample)
 	router.GET("/login", v1.LoginHandler)
 	router.POST("/create_user", v1.CreateUser)
 
