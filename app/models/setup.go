@@ -14,6 +14,9 @@ import (
 
 var DB *gorm.DB
 
+var error_message error
+var tokenString string
+
 func ConnectDatabase() {
 	err := godotenv.Load(".env")
 
