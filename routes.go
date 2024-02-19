@@ -9,7 +9,7 @@ import (
 )
 
 func sample(c *gin.Context) {
-    c.String(http.StatusOK, "Welcome to the twigs api!")
+	c.String(http.StatusOK, "Welcome to the twigs api!")
 }
 
 func setupRouter() *gin.Engine {
