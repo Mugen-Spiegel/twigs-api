@@ -17,11 +17,11 @@ func setupRouter() *gin.Engine {
 	router.GET("/sample", sample)
 	router.GET("/login", v1.LoginHandler)
 	router.POST("/create_user", v1.CreateUser)
+	router.POST("/subdivision", v1.CreateSubdivision)
 
 	router.Use(middleware.AuthMiddelware())
 
 	// router.GET("/users", v1.UserIndex)
 	router.GET("/user/:id", v1.UserShow)
-	router.POST("/subdivision", v1.CreateSubdivision)
 	return router
 }
