@@ -14,6 +14,7 @@ func sample(c *gin.Context) {
 
 func setupRouter() *gin.Engine {
 	router := gin.Default()
+	router.Use(middleware.CorsMiddleware())
 	router.GET("/sample", sample)
 	router.POST("/login", v1.LoginHandler)
 	router.POST("/create_user", v1.CreateUser)
